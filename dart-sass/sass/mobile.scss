@@ -1,43 +1,22 @@
-
-
+@use "../sass/mixins.scss";
+@use "../sass/Base/_base.scss";
+@use "../sass/Layout/_header.scss";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-*
-{
 
-    box-sizing: border-box;
-}
 
-body{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Roboto', sans-serif;
-}
 
-header{
-    display: flex;
-    justify-content: center;
-    box-shadow: 0px 3px 6px #acabab;
-    position: relative;
-    
-}
 
-h1 {
-    text-align: center;
-    font-size: large;
-    margin-top: 0px;
-    padding-top: 30px;
-}
+/* section location */
 .location{
     display: flex;
     justify-content: center;
     background-color: #eee;
-}
-.location i{
-    font-size: 20px;
-}
-.location_ville
+    i{
+        font-size: 20px;
+    }
+    .location_ville
 {
     margin-right: 30px;
 }
@@ -46,6 +25,11 @@ h1 {
     align-items: center;
     padding-right: 20px;
 }
+}
+
+
+
+
 
 
 /* section calltoaction */
@@ -58,16 +42,17 @@ h1 {
     align-items: center;
     text-align: center;
     background-color: #e5e5e55e;
-}
-.calltoaction_titre{
-    font-size: 28px;
-    margin-bottom: 0px;
-}
-.calltoaction_paragraphe
-{
-    font-size: 19px;
-    font-weight: 300;
-    margin-bottom: 30px;
+    .calltoaction_titre{
+        font-size: 28px;
+        margin-bottom: 0px;
+    }
+    .calltoaction_paragraphe
+    {
+        font-size: 19px;
+        font-weight: 300;
+        margin-bottom: 30px;
+    }
+    
 }
 .calltoaction_bouton{
     height: 60px;
@@ -80,9 +65,53 @@ h1 {
    background-image: linear-gradient(173deg, #FF79DA , #9356dc);
    box-shadow: 1px 9px 10px 0px lightgrey;
    margin-bottom: 35px;
-}
-.calltoaction_bouton:hover{
+   .calltoaction_bouton:hover{
     box-shadow: 1px 9px 4px 0px lightgrey;
     transform: scale(1.03);
     filter: brightness(110%);
 }
+}
+/* section fonctionnement */
+
+.fonctionnement{
+    margin-top: 50px;
+
+    h2{
+        padding-left: 5%;
+        margin: 0px;
+        font-size: 25px;
+    }
+
+    ol{
+       display: flex;
+       flex-direction: column;
+       gap: 25px;
+       text-align: center;
+       padding: 20px;
+       list-style-type: none;
+       margin-top: 5px;
+       
+   }
+    li{
+       background-color: rgba(229, 229, 229, 0.368627451);
+       box-shadow: 1px 9px 10px 0px lightgrey;
+       padding: 30px 28px;
+       flex-grow: 1;
+       border-radius: 15px;
+       font-size: 18px;
+       font-weight: 700;
+       display: flex;
+    gap: 18px;
+       
+   
+    & li:hover{
+        @include mixins.transform-zoom;
+   }
+   i{
+    margin-right: 10px;
+    color: grey;
+   }
+}
+}
+
+

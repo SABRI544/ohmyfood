@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -24,21 +26,19 @@ h1 {
   padding-top: 30px;
 }
 
+/* section location */
 .location {
   display: flex;
   justify-content: center;
   background-color: #eee;
 }
-
 .location i {
   font-size: 20px;
 }
-
-.location_ville {
+.location .location_ville {
   margin-right: 30px;
 }
-
-.location_icone {
+.location .location_icone {
   display: flex;
   align-items: center;
   padding-right: 20px;
@@ -54,13 +54,11 @@ h1 {
   text-align: center;
   background-color: rgba(229, 229, 229, 0.368627451);
 }
-
-.calltoaction_titre {
+.calltoaction .calltoaction_titre {
   font-size: 28px;
   margin-bottom: 0px;
 }
-
-.calltoaction_paragraphe {
+.calltoaction .calltoaction_paragraphe {
   font-size: 19px;
   font-weight: 300;
   margin-bottom: 30px;
@@ -78,11 +76,47 @@ h1 {
   box-shadow: 1px 9px 10px 0px lightgrey;
   margin-bottom: 35px;
 }
-
-.calltoaction_bouton:hover {
+.calltoaction_bouton .calltoaction_bouton:hover {
   box-shadow: 1px 9px 4px 0px lightgrey;
   transform: scale(1.03);
   filter: brightness(110%);
+}
+
+/* section fonctionnement */
+.fonctionnement {
+  margin-top: 50px;
+}
+.fonctionnement h2 {
+  padding-left: 5%;
+  margin: 0px;
+  font-size: 25px;
+}
+.fonctionnement ol {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+  padding: 20px;
+  list-style-type: none;
+  margin-top: 5px;
+}
+.fonctionnement li {
+  background-color: rgba(229, 229, 229, 0.368627451);
+  box-shadow: 1px 9px 10px 0px lightgrey;
+  padding: 30px 28px;
+  flex-grow: 1;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  gap: 18px;
+}
+.fonctionnement li li:hover {
+  transform: scale(1.05);
+}
+.fonctionnement li i {
+  margin-right: 10px;
+  color: grey;
 }
 
 /*# sourceMappingURL=mobile.css.map */
