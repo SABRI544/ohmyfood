@@ -1,0 +1,31 @@
+@use "../Utils/variables";
+footer {
+  background-color: variables.$color-footer;
+  color: white;
+  padding: 25px 25px 50px 25px;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+  h2 {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin:0px;
+    padding-bottom: 10px;
+  }
+  a{
+    color:white;
+    padding-top: 10px;
+  }
+  .footer_gap1
+  {
+    display: flex;
+    gap: 20px;
+  }
+  .footer_gap2
+  {
+    display: flex;
+    gap: 15px;
+  }
+}

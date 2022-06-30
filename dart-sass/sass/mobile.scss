@@ -2,6 +2,7 @@
 @use "../sass/Base/_base.scss";
 @use "../sass/Layout/_header.scss";
 @use "../sass/Utils/_variables.scss";
+@use "../sass/Layout/footer";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
@@ -124,6 +125,7 @@
 .restaurants
 {
     background-color: #e5e5e55e;
+    padding-bottom: 40px;
 
       h2{
         padding-top: 50px;
@@ -148,7 +150,7 @@
         background-color: variables.$color-tertiary;
         position: absolute;
         right: 20px;
-        top: 25px;
+        top: 20px;
         display: flex;
     justify-content: center;
     align-items: center;
