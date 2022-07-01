@@ -1,45 +1,81 @@
 /* resto */
 .resto {
-
-    .resto_nom{
-        display: flex;
-        justify-content: space-between;
-align-items: center;
- background-color: rgba(229, 229, 229);
+  .resto_nom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#f6f6f6;;
     border-radius: 30px 30px 0px 0px;
     padding: 25px 30px 0px;
     margin-top: -40px;
     position: relative;
-
-    }
-h2{
-    font-family: 'Shrikhand', cursive;
-    margin-top:0px;
+  }
+  h2 {
+    font-family: "Shrikhand", cursive;
+    margin-top: 0px;
     font-size: 27px;
-    
-}
+  }
 
-
-
-img{
+  img {
     object-fit: cover;
     height: 250px;
     width: 100%;
-}
-i{
-   
-
+  }
+  i {
     font-size: 27px;
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    color:white;
+    color: white;
     margin: 10px 9px 35px;
-        }
-         i:hover{
-            
-            color:purple;
-            
-            text-shadow : unset;
-            
-        }
-    }
+  }
+  i:hover {
+    color: purple;
 
+    text-shadow: unset;
+  }
+}
+/* menu entrées */
+.menu {
+  background-color:#f6f6f6;;
+  padding: 5%;
+  h3 {
+    margin-top: 0px;
+    font-weight: 400;
+  }
+  .bloc {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+  .bloc_carte {
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+    padding: 12px 17px 0px 10px;
+    .bloc_carte_soustitre {
+        font-weight: 900;
+        font-size: large;
+    }
+  }
+
+}
+
+.bloc_carte_description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding-bottom: 10px;
+
+    & p{
+        margin: 0px;
+    }
+    .bloc_carte_description_compo{
+        padding-top: 3px;
+    font-size: 14px;
+    }
+    .bloc_carte_description_prix{
+        font-size: 14px;
+    font-weight: 900;
+    }
+  }

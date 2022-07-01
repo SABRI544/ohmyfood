@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
@@ -65,7 +66,7 @@ footer .footer_gap2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(229, 229, 229);
+  background-color: #f6f6f6;
   border-radius: 30px 30px 0px 0px;
   padding: 25px 30px 0px;
   margin-top: -40px;
@@ -90,6 +91,50 @@ footer .footer_gap2 {
 .resto i:hover {
   color: purple;
   text-shadow: unset;
+}
+
+/* menu entrées */
+.menu {
+  background-color: #f6f6f6;
+  padding: 5%;
+}
+.menu h3 {
+  margin-top: 0px;
+  font-weight: 400;
+}
+.menu .bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu .bloc_carte {
+  background-color: white;
+  border-radius: 15px;
+  width: 100%;
+  padding: 12px 17px 0px 10px;
+}
+.menu .bloc_carte .bloc_carte_soustitre {
+  font-weight: 900;
+  font-size: large;
+}
+
+.bloc_carte_description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+.bloc_carte_description p {
+  margin: 0px;
+}
+.bloc_carte_description .bloc_carte_description_compo {
+  padding-top: 3px;
+  font-size: 14px;
+}
+.bloc_carte_description .bloc_carte_description_prix {
+  font-size: 14px;
+  font-weight: 900;
 }
 
 /* section location */
