@@ -60,6 +60,38 @@ footer .footer_gap2 {
   gap: 15px;
 }
 
+/* resto */
+.resto .resto_nom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(229, 229, 229);
+  border-radius: 30px 30px 0px 0px;
+  padding: 25px 30px 0px;
+  margin-top: -40px;
+  position: relative;
+}
+.resto h2 {
+  font-family: "Shrikhand", cursive;
+  margin-top: 0px;
+  font-size: 27px;
+}
+.resto img {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+}
+.resto i {
+  font-size: 27px;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  color: white;
+  margin: 10px 9px 35px;
+}
+.resto i:hover {
+  color: purple;
+  text-shadow: unset;
+}
+
 /* section location */
 .location {
   display: flex;
@@ -207,8 +239,9 @@ footer .footer_gap2 {
   color: white;
   margin: 10px 30px 25px;
 }
-.restaurants .restaurants_carte .fa-heart:hover {
-  color: pink;
+.restaurants .restaurants_carte i:hover {
+  transform: scale(1.05);
+  color: purple;
   text-shadow: unset;
 }
 .restaurants .restaurants_bloccartes {
