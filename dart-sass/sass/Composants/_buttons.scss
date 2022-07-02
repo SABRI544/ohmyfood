@@ -1,0 +1,23 @@
+@use "../Utils/_variables.scss";
+/* Bouton réutilisable calltoaction et bas de page restaurants */
+@mixin bouton {
+    height: 60px;
+    width: 250px;
+    border-radius: 30px;
+    color: variables.$color-white;
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+    background-image: linear-gradient(
+      173deg,
+      variables.$color-secondary,
+      variables.$color-primary
+    );
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19);
+    margin-bottom: 35px;
+    &:hover {
+      box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38);
+      transform: scale(1.03);
+      filter: brightness(110%);
+    }
+  }

@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+/* base scss */
 * {
   box-sizing: border-box;
 }
@@ -18,20 +19,21 @@ a {
   color: black;
 }
 
+/* header */
 header {
   display: flex;
   justify-content: center;
   box-shadow: 0px 3px 6px #acabab;
   position: relative;
 }
-
-h1 {
+header h1 {
   text-align: center;
   font-size: large;
   margin-top: 0px;
   padding-top: 30px;
 }
 
+/* footer */
 footer {
   background-color: #353535;
   color: white;
@@ -61,6 +63,7 @@ footer .footer_gap2 {
   gap: 15px;
 }
 
+/* Bouton réutilisable calltoaction et bas de page restaurants */
 /* resto */
 .resto .resto_nom {
   display: flex;
@@ -105,6 +108,7 @@ footer .footer_gap2 {
 .menu .bloc {
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
   gap: 20px;
 }
 .menu .bloc_carte {
@@ -137,6 +141,10 @@ footer .footer_gap2 {
   font-weight: 900;
 }
 
+.bout {
+  margin-left: 50px;
+}
+
 /* section location */
 .location {
   display: flex;
@@ -153,6 +161,7 @@ footer .footer_gap2 {
   display: flex;
   align-items: center;
   padding-right: 20px;
+  padding-bottom: 8px;
 }
 
 /* section calltoaction */
@@ -163,7 +172,7 @@ footer .footer_gap2 {
   padding: 30px;
   align-items: center;
   text-align: center;
-  background-color: rgba(229, 229, 229, 0.368627451);
+  background-color: #f6f6f6;
 }
 .calltoaction .calltoaction_titre {
   font-size: 28px;
@@ -175,7 +184,8 @@ footer .footer_gap2 {
   margin-bottom: 30px;
 }
 
-.calltoaction_bouton {
+/* Bouton réutilisable calltoaction et bas de page restaurants */
+button {
   height: 60px;
   width: 250px;
   border-radius: 30px;
@@ -184,11 +194,11 @@ footer .footer_gap2 {
   font-size: 17px;
   border: none;
   background-image: linear-gradient(173deg, #FF79DA, #9356DC);
-  box-shadow: 1px 9px 10px 0px lightgrey;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.19);
   margin-bottom: 35px;
 }
-.calltoaction_bouton .calltoaction_bouton:hover {
-  box-shadow: 1px 9px 4px 0px lightgrey;
+button:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.38);
   transform: scale(1.03);
   filter: brightness(110%);
 }
@@ -213,7 +223,7 @@ footer .footer_gap2 {
   margin-top: 5px;
 }
 .fonctionnement li {
-  background-color: rgba(229, 229, 229, 0.368627451);
+  background-color: #f6f6f6;
   box-shadow: 1px 9px 10px 0px lightgrey;
   padding: 30px 28px;
   flex-grow: 1;
@@ -224,7 +234,7 @@ footer .footer_gap2 {
   justify-content: center;
   gap: 18px;
 }
-.fonctionnement li li:hover {
+.fonctionnement li:hover {
   transform: scale(1.05);
 }
 .fonctionnement li i {
@@ -241,6 +251,9 @@ footer .footer_gap2 {
   padding-top: 50px;
   padding-left: 5%;
 }
+.restaurants .restaurants_bloccartes {
+  padding: 0px 25px;
+}
 .restaurants .restaurants_carte {
   margin: 20px 0px;
   position: relative;
@@ -251,7 +264,7 @@ footer .footer_gap2 {
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-.restaurants .restaurants_carte .restaurants_carte_nouveau {
+.restaurants .restaurants_carte_nouveau {
   height: 30px;
   width: 90px;
   background-color: #99E2D0;
@@ -264,7 +277,7 @@ footer .footer_gap2 {
   color: #278870;
   font-weight: 700;
 }
-.restaurants .restaurants_carte .restaurants_carte_description {
+.restaurants .restaurants_carte_description {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -272,10 +285,10 @@ footer .footer_gap2 {
   margin-bottom: 25px;
   border-radius: 0px 0px 20px 20px;
 }
-.restaurants .restaurants_carte .restaurants_carte_description h3 {
+.restaurants .restaurants_carte_description h3 {
   margin: 10px 0px 0px 10px;
 }
-.restaurants .restaurants_carte .restaurants_carte_description p {
+.restaurants .restaurants_carte_description p {
   margin: 3px 0px 20px 10px;
 }
 .restaurants .restaurants_carte i {
@@ -288,9 +301,6 @@ footer .footer_gap2 {
   transform: scale(1.05);
   color: purple;
   text-shadow: unset;
-}
-.restaurants .restaurants_bloccartes {
-  padding: 0px 25px;
 }
 
 /*# sourceMappingURL=mobile.css.map */

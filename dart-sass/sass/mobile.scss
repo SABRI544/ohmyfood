@@ -4,205 +4,164 @@
 @use "../sass/Utils/_variables.scss";
 @use "../sass/Layout/footer";
 @use "../sass/Pages/restaurants.scss";
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-
-
-
+@use "../sass/Composants/_buttons.scss";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 /* section location */
-.location{
-    display: flex;
-    justify-content: center;
-    background-color: #eee;
-    i{
-        font-size: 20px;
-    }
-    .location_ville
-{
+.location {
+  display: flex;
+  justify-content: center;
+  background-color: #eee;
+  i {
+    font-size: 20px;
+  }
+  .location_ville {
     margin-right: 30px;
-}
-.location_icone{
+  }
+  .location_icone {
     display: flex;
     align-items: center;
     padding-right: 20px;
+    padding-bottom: 8px;
+  }
 }
-}
-
-
-
-
-
 
 /* section calltoaction */
 
-.calltoaction{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px;
-    align-items: center;
-    text-align: center;
-    background-color: #e5e5e55e;
-    .calltoaction_titre{
-        font-size: 28px;
-        margin-bottom: 0px;
-    }
-    .calltoaction_paragraphe
-    {
-        font-size: 19px;
-        font-weight: 300;
-        margin-bottom: 30px;
-    }
-    
+.calltoaction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  align-items: center;
+  text-align: center;
+  background-color: variables.$color-fondgris;
+  .calltoaction_titre {
+    font-size: 28px;
+    margin-bottom: 0px;
+  }
+  .calltoaction_paragraphe {
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
 }
-.calltoaction_bouton{
-    height: 60px;
-    width: 250px;
-    border-radius: 30px;
-    color: white;
-    font-weight: 600;
-    font-size: 17px;
-    border: none;
-   background-image: linear-gradient(173deg, variables.$color-secondary ,variables.$color-primary);
-   box-shadow: 1px 9px 10px 0px lightgrey;
-   margin-bottom: 35px;
-   .calltoaction_bouton:hover{
-    box-shadow: 1px 9px 4px 0px lightgrey;
-    transform: scale(1.03);
-    filter: brightness(110%);
-}
-}
+
+/* Bouton réutilisable calltoaction et bas de page restaurants */
+button {
+    @include buttons.bouton ;
+  }
 /* section fonctionnement */
 
-.fonctionnement{
-    margin-top: 50px;
-    padding-bottom: 20px;
+.fonctionnement {
+  margin-top: 50px;
+  padding-bottom: 20px;
 
-    h2{
-        padding-left: 5%;
-        margin: 0px;
-        font-size: 25px;
-    }
+  h2 {
+    padding-left: 5%;
+    margin: 0px;
+    font-size: 25px;
+  }
 
-    ol{
-       display: flex;
-       flex-direction: column;
-       gap: 25px;
-       text-align: center;
-       padding: 20px;
-       list-style-type: none;
-       margin-top: 5px;
-       
-   }
-    li{
-       background-color: rgba(229, 229, 229, 0.368627451);
-       box-shadow: 1px 9px 10px 0px lightgrey;
-       padding: 30px 28px;
-       flex-grow: 1;
-       border-radius: 15px;
-       font-size: 18px;
-       font-weight: 700;
-       display: flex;
-       justify-content: center;
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    padding: 20px;
+    list-style-type: none;
+    margin-top: 5px;
+  }
+  li {
+    background-color: variables.$color-fondgris;
+    box-shadow: 1px 9px 10px 0px lightgrey;
+    padding: 30px 28px;
+    flex-grow: 1;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
     gap: 18px;
-       
-   
-    & li:hover{
-        @include mixins.transform-zoom;
-   }
-   i{
-    margin-right: 10px;
-    color: grey;
-   }
-}
-}
 
+    &:hover {
+      @include mixins.transform-zoom;
+    }
+    i {
+      margin-right: 10px;
+      color: grey;
+    }
+  }
+}
 
 /* section restaurants */
 
+.restaurants {
+  background-color: #e5e5e55e;
+  padding-bottom: 40px;
 
-.restaurants
-{
-    background-color: #e5e5e55e;
-    padding-bottom: 40px;
+  h2 {
+    padding-top: 50px;
+    padding-left: 5%;
+  }
+  .restaurants_bloccartes {
+    padding: 0px 25px;
+  }
 
-      h2{
-        padding-top: 50px;
-        padding-left: 5%;
-    }
- .restaurants_carte
- {
   
+  .restaurants_carte {
     margin: 20px 0px;
     position: relative;
-    
-     & img{
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 20px 20px 0px 0px;
-     }
-     
-     .restaurants_carte_nouveau{
-        height: 30px;
-        width: 90px;
-        background-color: variables.$color-tertiary;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    color: darken($color: #99e2d0, $amount: 40);
-    font-weight: 700;
 
-    
-     }
-     .restaurants_carte_description
-     {
-        display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    margin-bottom: 25px;
-    border-radius: 0px 0px 20px 20px;
+    & img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px 20px 0px 0px;
+    }
 
-    h3{
+    &_nouveau {
+      height: 30px;
+      width: 90px;
+      background-color: variables.$color-tertiary;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: darken($color: variables.$color-tertiary, $amount: 40);
+      font-weight: 700;
+    }
+    &_description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: variables.$color-white;
+      margin-bottom: 25px;
+      border-radius: 0px 0px 20px 20px;
+
+      h3 {
         margin: 10px 0px 0px 10px;
-    }
+      }
 
-    p{
+      p {
         margin: 3px 0px 20px 10px;
+      }
     }
-     }
-
 
     i {
+      font-size: 27px;
+      text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+      color: variables.$color-white;
+      margin: 10px 30px 25px;
+    }
+    i:hover {
+      @include mixins.transform-zoom;
+      color: purple;
 
-        font-size: 27px;
-        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-        color:white;
-        margin: 10px 30px 25px;
-            }
-            i:hover{
-                @include mixins.transform-zoom;
-                color:purple;
-                
-                text-shadow : unset;
-                
-            }
-     
-       
+      text-shadow: unset;
+    }
     
- }
-
- .restaurants_bloccartes
- {
-    padding: 0px 25px;
-  
-    
- }
- 
-}
+}}

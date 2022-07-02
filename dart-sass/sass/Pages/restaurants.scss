@@ -1,3 +1,5 @@
+@use "../Composants/_buttons.scss";
+@use "../Utils/_variables.scss";
 /* resto */
 .resto {
   .resto_nom {
@@ -44,7 +46,7 @@
   .bloc {
     display: flex;
     flex-direction: column;
-
+    padding-bottom: 50px;
     gap: 20px;
   }
   .bloc_carte {
@@ -79,3 +81,9 @@
     font-weight: 900;
     }
   }
+  .bout
+  {
+    margin-left: 50px;
+  }
+
+ 
