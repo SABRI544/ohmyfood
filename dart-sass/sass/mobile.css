@@ -104,6 +104,9 @@ footer .footer_gap2 {
 .menu h3 {
   margin-top: 0px;
   font-weight: 400;
+  border-bottom: 5px solid #99E2D0;
+  width: 45px;
+  padding-bottom: 5px;
 }
 .menu .bloc {
   display: flex;
@@ -141,8 +144,8 @@ footer .footer_gap2 {
   font-weight: 900;
 }
 
-.bout {
-  margin-left: 50px;
+.btn {
+  text-align: center;
 }
 
 /* section location */
