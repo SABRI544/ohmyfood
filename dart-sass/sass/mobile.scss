@@ -76,22 +76,51 @@ button {
   li {
     background-color: variables.$color-fondgris;
     box-shadow: 1px 9px 10px 0px lightgrey;
-    padding: 30px 28px;
+    padding: 25px 20px;
     flex-grow: 1;
     border-radius: 15px;
     font-size: 18px;
     font-weight: 700;
     display: flex;
-    justify-content: center;
-    gap: 18px;
+    
+    align-items: center;
+   
 
     &:hover {
       @include mixins.transform-zoom;
+      background-color: #9356dc2b;
+     
+
+      i{
+        color:#9356dc;
+      }
+     
     }
     i {
-      margin-right: 10px;
+      margin-right: 30px;
       color: grey;
+      
     }
+
+    .num
+    {
+    height: 25px;
+    width: 25px;
+    background-color: #9356dc;
+    color: white;
+    position: relative;
+    right: 30px;
+    
+    font-size: 15px;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    }
+   
   }
 }
 
