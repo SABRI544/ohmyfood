@@ -64,6 +64,14 @@ footer .footer_gap2 {
 }
 
 /* Bouton réutilisable calltoaction et bas de page restaurants */
+header i {
+  position: absolute;
+  left: 20px;
+  top: 35px;
+  font-weight: bolder;
+  font-size: 23px;
+}
+
 /* resto */
 .resto .resto_nom {
   display: flex;
@@ -321,8 +329,8 @@ button:hover {
 }
 .restaurants .restaurants_carte i:hover {
   transform: scale(1.05);
-  color: purple;
   text-shadow: unset;
+  color: #dc56d7;
 }
 
 /*# sourceMappingURL=mobile.css.map */

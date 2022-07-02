@@ -1,5 +1,13 @@
 @use "../Composants/_buttons.scss";
 @use "../Utils/_variables.scss";
+
+header i{
+    position: absolute;
+    left: 20px;
+    top: 35px;
+    font-weight: bolder;
+    font-size: 23px;
+}
 /* resto */
 .resto {
   .resto_nom {

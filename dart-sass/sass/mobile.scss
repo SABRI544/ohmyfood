@@ -188,9 +188,14 @@ button {
     }
     i:hover {
       @include mixins.transform-zoom;
-      color: purple;
+      
 
       text-shadow: unset;
+      color:#dc56d7;
+      
     }
     
-}}
+    }
+    
+    
+}
