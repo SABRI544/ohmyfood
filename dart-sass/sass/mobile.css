@@ -297,7 +297,7 @@ button:hover {
   align-items: center;
 }
 .fonctionnement li:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   background-color: rgba(147, 86, 220, 0.168627451);
 }
 .fonctionnement li:hover i {
@@ -380,7 +380,7 @@ button:hover {
   margin: 10px 30px 25px;
 }
 .restaurants .restaurants_carte i:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   text-shadow: unset;
   color: #dc56d7;
 }
