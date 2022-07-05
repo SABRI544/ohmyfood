@@ -104,7 +104,7 @@ header i {
   text-shadow: unset;
 }
 
-/* menu entrées */
+/* menu */
 .menu {
   background-color: #f6f6f6;
   padding: 5%;
@@ -112,7 +112,7 @@ header i {
 .menu h3 {
   margin-top: 0px;
   font-weight: 400;
-  border-bottom: 5px solid #99E2D0;
+  border-bottom: 5px solid #99e2d0;
   width: 45px;
   padding-bottom: 5px;
 }
@@ -122,36 +122,86 @@ header i {
   padding-bottom: 50px;
   gap: 20px;
 }
-.menu .bloc_carte {
+
+.bloc_carte {
   background-color: white;
   border-radius: 15px;
   width: 100%;
-  padding: 12px 17px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.menu .bloc_carte .bloc_carte_soustitre {
-  font-weight: 900;
-  font-size: large;
+.bloc_carte:hover i {
+  margin-right: 0px;
+  transition: margin-right 0.5s;
+  animation: spinicone ease-in-out 3s;
 }
 
-.bloc_carte_description {
+@keyframes spinicone {
+  from {
+    transform: rotate(-240deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.bloc_carte_desc {
+  padding: 0px 10px 0px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.bloc_carte_desc .bloc_carte_desc_soustitre {
+  font-weight: 900;
+  font-size: large;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bloc_carte_desc .bloc_carte_desc_description {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0px;
-  padding-bottom: 10px;
 }
-.bloc_carte_description p {
+.bloc_carte_desc .bloc_carte_desc_description p {
   margin: 0px;
 }
-.bloc_carte_description .bloc_carte_description_compo {
+.bloc_carte_desc .bloc_carte_desc_description .bloc_carte_desc_description_compo {
   padding-top: 3px;
   font-size: 14px;
-}
-.bloc_carte_description .bloc_carte_description_prix {
-  font-size: 14px;
-  font-weight: 900;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.bloc_carte_icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0px 15px 15px 0px;
+  cursor: pointer;
+}
+.bloc_carte_icone .bloc_carte_icone_prix {
+  font-size: 14px;
+  font-weight: 900;
+  margin-right: 20px;
+  padding-top: 25px;
+  padding-right: 15px;
+}
+.bloc_carte_icone i {
+  background-color: #99e2d0;
+  height: 70px;
+  width: 70px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -70px;
+  opacity: 1;
+  font-size: x-large;
+}
+
+/* Bouton commander à la fin de la page resto */
 .btn {
   text-align: center;
 }
