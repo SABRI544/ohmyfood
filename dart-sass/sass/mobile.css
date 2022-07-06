@@ -100,8 +100,13 @@ header i {
   margin: 10px 9px 35px;
 }
 .resto i:hover {
-  color: purple;
+  transform: scale(1.01);
   text-shadow: unset;
+  background-image: linear-gradient(173deg, #FF79DA, #9356DC);
+  transition: all 0.3s ease-in-out;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* menu */
@@ -410,7 +415,11 @@ button:hover {
 .restaurants .restaurants_carte i:hover {
   transform: scale(1.01);
   text-shadow: unset;
-  color: #dc56d7;
+  background-image: linear-gradient(173deg, #FF79DA, #9356DC);
+  transition: all 0.3s ease-in-out;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /*  loader*/

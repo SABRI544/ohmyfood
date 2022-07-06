@@ -1,5 +1,6 @@
 @use "../Composants/_buttons.scss";
 @use "../Utils/_variables.scss";
+@use "../Utils/mixins.scss";
 
 header i {
   position: absolute;
@@ -37,10 +38,19 @@ header i {
     color: white;
     margin: 10px 9px 35px;
   }
-  i:hover {
-    color: purple;
+   i:hover {
+    @include mixins.transform-zoom;
 
     text-shadow: unset;
+    background-image: linear-gradient(
+    173deg,
+    variables.$color-secondary,
+    variables.$color-primary
+  );
+  transition: all 0.3s ease-in-out;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color:transparent;
   }
 }
 /* menu */
