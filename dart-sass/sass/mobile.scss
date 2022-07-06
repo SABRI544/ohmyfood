@@ -4,6 +4,7 @@
 @use "../sass/Utils/_variables.scss";
 @use "../sass/Layout/footer";
 @use "../sass/Pages/restaurants.scss";
+@use "../sass/desktop.scss";
 @use "../sass/Composants/_buttons.scss";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
@@ -253,8 +254,8 @@ button {
   text-transform: uppercase;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: anima 1.5s ease-in-out infinite;
-          animation: anima 1.5s ease-in-out infinite;
+  -webkit-animation: anima 1.5s ease-in-out ;
+          animation: anima 1.5s ease-in-out ;
 }
 
 @-webkit-keyframes anima {
@@ -289,7 +290,7 @@ button {
   border-top: 6px solid #99e2d0;
 
   position: relative;
-  -webkit-animation: chargement 1s linear infinite;
+  -webkit-animation: chargement 1s linear infinite ;
           animation: chargement 1s linear infinite;
 
   &::after {

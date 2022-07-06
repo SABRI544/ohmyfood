@@ -1,0 +1,8 @@
+/*  fonctionnement*/
+@media screen and (min-width: 992px) {
+  .fonctionnement ol {
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */

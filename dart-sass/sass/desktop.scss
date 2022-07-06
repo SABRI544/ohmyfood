@@ -1,0 +1,60 @@
+
+
+
+@media screen and (min-width: 992px){
+
+
+
+    .fonctionnement ol{
+        
+        flex-direction: row;
+    }
+    .restaurants_bloccartes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        a{
+            width: 45%;
+        }
+    
+    }
+    
+    
+    footer
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+        h2{
+            padding-top: 5px;
+        }
+    
+        .footer_gap1, .footer_gap2{
+            padding-left: 40px;
+        }
+    
+        a{
+            padding-left: 25px;
+            text-align: center;
+        }
+       
+    }
+
+    .menu .bloc{
+        display: flex;
+   
+    flex-direction: row;
+    justify-content: center;
+    }
+    .bloc_carte
+    {    max-width: 30%;}
+    
+    
+    
+    }

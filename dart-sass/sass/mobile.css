@@ -240,6 +240,45 @@ header i {
   text-align: center;
 }
 
+@media screen and (min-width: 992px) {
+  .fonctionnement ol {
+    flex-direction: row;
+  }
+  .restaurants_bloccartes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .restaurants_bloccartes a {
+    width: 45%;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer h2 {
+    padding-top: 5px;
+  }
+  footer .footer_gap1, footer .footer_gap2 {
+    padding-left: 40px;
+  }
+  footer a {
+    padding-left: 25px;
+    text-align: center;
+  }
+  .menu .bloc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .bloc_carte {
+    max-width: 30%;
+  }
+}
 /* section location */
 .location {
   display: flex;
@@ -462,8 +501,8 @@ button:hover {
   text-transform: uppercase;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: anima 1.5s ease-in-out infinite;
-  animation: anima 1.5s ease-in-out infinite;
+  -webkit-animation: anima 1.5s ease-in-out;
+  animation: anima 1.5s ease-in-out;
 }
 
 @-webkit-keyframes anima {
