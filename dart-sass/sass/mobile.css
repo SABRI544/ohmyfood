@@ -241,9 +241,11 @@ header i {
 }
 
 @media screen and (min-width: 992px) {
+  /*  fonctionnement*/
   .fonctionnement ol {
     flex-direction: row;
   }
+  /*  Restaurants*/
   .restaurants_bloccartes {
     display: flex;
     flex-direction: row;
@@ -255,6 +257,7 @@ header i {
   .restaurants_bloccartes a {
     width: 45%;
   }
+  /*  footer*/
   footer {
     display: flex;
     flex-direction: row;
@@ -277,6 +280,43 @@ header i {
   }
   .bloc_carte {
     max-width: 30%;
+  }
+}
+/*  loader*/
+@-webkit-keyframes disparition {
+  to {
+    transform: translateY(-100%);
+    opacity: 0.5;
+  }
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes disparition {
+  to {
+    transform: translateY(-100%);
+    opacity: 0.5;
+  }
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes chargement {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes chargement {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /* section location */
@@ -450,12 +490,12 @@ button:hover {
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
   color: white;
   margin: 10px 30px 25px;
+  transition: all 0.3s ease-in-out;
 }
 .restaurants .restaurants_carte i:hover {
   transform: scale(1.01);
   text-shadow: unset;
   background-image: linear-gradient(173deg, #FF79DA, #9356DC);
-  transition: all 0.3s ease-in-out;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -463,7 +503,7 @@ button:hover {
 
 /*  loader*/
 .loader {
-  background-color: black;
+  background-color: #f6f6f6;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -475,58 +515,17 @@ button:hover {
   align-items: center;
 }
 
-@-webkit-keyframes disparition {
-  to {
-    transform: translateY(-100%);
-  }
-  from {
-    transform: translateY(0%);
-  }
-}
-@keyframes disparition {
-  to {
-    transform: translateY(-100%);
-  }
-  from {
-    transform: translateY(0%);
-  }
-}
 .loader_myfood {
-  padding: 10px;
+  padding: 5px;
   background-image: linear-gradient(173deg, #FF79DA, #9356DC);
   font-family: "Shrikhand", "sans-serif";
   font-weight: 900;
   font-size: 50px;
-  background-size: 300%;
-  text-transform: uppercase;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: anima 1.5s ease-in-out;
-  animation: anima 1.5s ease-in-out;
+  background-clip: text;
+  color: transparent;
 }
 
-@-webkit-keyframes anima {
-  0% {
-    background-position: 0px 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0px 50%;
-  }
-}
-@keyframes anima {
-  0% {
-    background-position: 0px 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0px 50%;
-  }
-}
 .loader_spin {
   border-radius: 50px;
   border: 6px solid transparent;
@@ -550,23 +549,6 @@ button:hover {
   -webkit-animation: chargement 1s linear infinite;
   animation: chargement 1s linear infinite;
   background-image: linear-gradient(173deg, #FF79DA, #9356DC);
-}
-
-@-webkit-keyframes chargement {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes chargement {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*# sourceMappingURL=mobile.css.map */

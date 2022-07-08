@@ -1,0 +1,44 @@
+/*  loader*/
+
+@-webkit-keyframes disparition {
+  
+    to {transform: translateY(-100%);
+        opacity: 0.50; 
+    }
+  
+    from {
+      transform: translateY(0%);
+      opacity: 1.00; 
+    }
+}
+@keyframes disparition {
+   
+
+    to {transform: translateY(-100%);
+        opacity: 0.50; 
+    }
+  
+    from {
+      transform: translateY(0%);
+      opacity: 1.00; 
+    }
+}
+@-webkit-keyframes chargement {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  
+  @keyframes chargement {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

@@ -6,6 +6,7 @@
 @use "../sass/Pages/restaurants.scss";
 @use "../sass/desktop.scss";
 @use "../sass/Composants/_buttons.scss";
+@use "../sass/Base/animations";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
@@ -92,7 +93,6 @@ button {
 
       i {
         color: #9356dc;
-        
       }
     }
     i {
@@ -142,7 +142,7 @@ button {
       height: 200px;
       width: 100%;
       -o-object-fit: cover;
-         object-fit: cover;
+      object-fit: cover;
       border-radius: 20px 20px 0px 0px;
     }
 
@@ -181,20 +181,21 @@ button {
       text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
       color: variables.$color-white;
       margin: 10px 30px 25px;
+      transition: all 0.3s ease-in-out;
     }
     i:hover {
       @include mixins.transform-zoom;
 
       text-shadow: unset;
       background-image: linear-gradient(
-      173deg,
-      variables.$color-secondary,
-      variables.$color-primary
-    );
-    transition: all 0.3s ease-in-out;
-    -webkit-background-clip: text;
-            background-clip: text;
-    color:transparent;
+        173deg,
+        variables.$color-secondary,
+        variables.$color-primary
+      );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
   }
 }
@@ -202,7 +203,7 @@ button {
 /*  loader*/
 
 .loader {
-  background-color: black;
+  background-color: variables.$color-fondgris;
 
   position: fixed;
   height: 100%;
@@ -210,37 +211,15 @@ button {
 
   z-index: 1;
   -webkit-animation: disparition 6s forwards;
-          animation: disparition 6s forwards;
+  animation: disparition 6s forwards;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  
-}
-@-webkit-keyframes disparition {
-  
-    to {transform: translateY(-100%);
-        
-    }
-  
-    from {
-      transform: translateY(0%);
-    }
-}
-@keyframes disparition {
-   
-
-    to {transform: translateY(-100%);
-        
-    }
-  
-    from {
-      transform: translateY(0%);
-    }
 }
 
 .loader_myfood {
-  padding: 10px;
+  padding: 5px;
   background-image: linear-gradient(
     173deg,
     variables.$color-secondary,
@@ -249,38 +228,11 @@ button {
   font-family: "Shrikhand", "sans-serif";
   font-weight: 900;
   font-size: 50px;
-  background-size: 300%;
-
-  text-transform: uppercase;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: anima 1.5s ease-in-out ;
-          animation: anima 1.5s ease-in-out ;
+  background-clip: text;
+  color: transparent;
 }
 
-@-webkit-keyframes anima {
-  0% {
-    background-position: 0px 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0px 50%;
-  }
-}
-
-@keyframes anima {
-  0% {
-    background-position: 0px 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0px 50%;
-  }
-}
 .loader_spin {
   border-radius: 50px;
 
@@ -290,8 +242,8 @@ button {
   border-top: 6px solid #99e2d0;
 
   position: relative;
-  -webkit-animation: chargement 1s linear infinite ;
-          animation: chargement 1s linear infinite;
+  -webkit-animation: chargement 1s linear infinite;
+  animation: chargement 1s linear infinite;
 
   &::after {
     content: "";
@@ -302,36 +254,14 @@ button {
     width: 30px;
     position: absolute;
     border-radius: 50px;
-  
+
     right: -6px;
     -webkit-animation: chargement 1s linear infinite;
-            animation: chargement 1s linear infinite;
+    animation: chargement 1s linear infinite;
     background-image: linear-gradient(
       173deg,
       variables.$color-secondary,
       variables.$color-primary
     );
-  }
-}
-
-
-
-@-webkit-keyframes chargement {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-
-@keyframes chargement {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
