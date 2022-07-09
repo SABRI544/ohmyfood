@@ -1,6 +1,7 @@
 @use "../Composants/_buttons.scss";
 @use "../Utils/_variables.scss";
 @use "../Utils/mixins.scss";
+@use "../Base/_animations.scss";
 
 header i {
   position: absolute;
@@ -28,6 +29,7 @@ header i {
   }
 
   img {
+    -o-object-fit: cover;
     object-fit: cover;
     height: 250px;
     width: 100%;
@@ -35,33 +37,34 @@ header i {
   i {
     font-size: 27px;
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    color: white;
+    color: variables.$color-white;
     margin: 10px 9px 35px;
+    transition: all 0.3s ease-in-out;
   }
-   i:hover {
+  i:hover {
     @include mixins.transform-zoom;
 
     text-shadow: unset;
     background-image: linear-gradient(
-    173deg,
-    variables.$color-secondary,
-    variables.$color-primary
-  );
-  transition: all 0.3s ease-in-out;
-  -webkit-background-clip: text;
-          background-clip: text;
-  color:transparent;
+      173deg,
+      variables.$color-secondary,
+      variables.$color-primary
+    );
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
 /* menu */
 .menu {
   background-color: #f6f6f6;
   padding: 5%;
- 
+
   h3 {
     margin-top: 0px;
     font-weight: 400;
-    border-bottom: 5px solid #99e2d0;
+    border-bottom: 5px solid variables.$color-tertiary;
     width: 45px;
     padding-bottom: 5px;
   }
@@ -70,104 +73,83 @@ header i {
     flex-direction: column;
     padding-bottom: 50px;
     gap: 20px;
-    
   }
- 
 }
 
 .bloc_carte {
-    background-color: white;
-    border-radius: 15px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    animation: apparition 0.5s ;
-    
-    animation-fill-mode: backwards;
-    
-    &:hover i {
-      margin-right: 0px;
-      transition: margin-right 0.5s;
-      animation: spinicone ease-in-out 0.6s;
-      
-      
-      
-      }
-      
-    
-    
+  background-color: variables.$color-white;
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-animation: apparition 0.5s;
+  animation: apparition 0.5s;
+  
+
+  -webkit-animation-fill-mode: backwards;
+
+  animation-fill-mode: backwards;
+
+  &:hover i {
+    margin-right: 0px;
+    transition: margin-right 0.5s;
+    -webkit-animation: spinicone ease-in-out 0.6s;
+    animation: spinicone ease-in-out 0.6s;
   }
+}
 
-  .bloc_carte:nth-child(1){
-    animation-delay: 0.1s;
-  }
+.bloc_carte:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
 
-
-.bloc_carte:nth-child(2){
+.bloc_carte:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
 
-
-.bloc_carte:nth-child(3){
+.bloc_carte:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-
-
-@keyframes spinicone{
-    from {
-        transform: rotate(-300deg);   
-    }
-    to {
-        transform: rotate(0deg);
-    }
-}
-@keyframes apparition{
-    0%{
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-   
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+.bloc_carte:nth-child(4) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
 
 .bloc_carte_desc {
-    padding: 0px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
+  overflow: hidden;
+
+  white-space: nowrap;
+  
+
+  .bloc_carte_desc_soustitre {
+    font-weight: 900;
+    font-size: large;
     overflow: hidden;
-   
-    white-space: nowrap;
+
     text-overflow: ellipsis;
-    
-    .bloc_carte_desc_soustitre {
-      font-weight: 900;
-      font-size: large;
-      overflow: hidden;
-  
-      text-overflow: ellipsis;
-     
-    }
-    .bloc_carte_desc_description {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  }
+  .bloc_carte_desc_description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+
+    & p {
       margin: 0px;
-  
-      & p {
-        margin: 0px;
-        
-      }
-      .bloc_carte_desc_description_compo {
-        padding-top: 3px;
-        font-size: 14px;
-        overflow: hidden;
-  
-        text-overflow: ellipsis;
-      }
+    }
+    .bloc_carte_desc_description_compo {
+      padding-top: 3px;
+      font-size: 14px;
+      overflow: hidden;
+
+      text-overflow: ellipsis;
     }
   }
+}
 
 .bloc_carte_icone {
   display: flex;
@@ -176,7 +158,6 @@ header i {
   overflow: hidden;
   border-radius: 0px 15px 15px 0px;
   cursor: pointer;
-  
 
   .bloc_carte_icone_prix {
     font-size: 14px;
@@ -185,40 +166,26 @@ header i {
     padding-top: 25px;
     padding-right: 15px;
     padding-left: 15px;
-    
   }
 
   i {
-   
     height: 70px;
     width: 70px;
-    color: white;
+    color: variables.$color-white;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: -70px;
     opacity: 1;
     font-size: x-large;
-
-    
-    
   }
-  .bloc_carte_icone_ico{
-    background-color: #99e2d0;
+  .bloc_carte_icone_ico {
+    background-color: variables.$color-tertiary;
     overflow: hidden;
-    
+    border-radius: 0px 15px 15px 0px;
     display: flex;
+  }
 }
-    
-
-  
-}
-
-
-
-
-
-
 
 /* Bouton commander à la fin de la page resto */
 .btn {

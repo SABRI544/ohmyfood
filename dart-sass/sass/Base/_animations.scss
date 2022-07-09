@@ -1,4 +1,4 @@
-/*  loader*/
+/*  loader page d'accueil*/
 
 @-webkit-keyframes disparition {
   
@@ -42,3 +42,46 @@
       transform: rotate(360deg);
     }
   }
+
+
+  /*  animations page resto*/
+  @-webkit-keyframes spinicone{
+    from {
+        transform: rotate(-300deg);   
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes spinicone{
+    from {
+        transform: rotate(-300deg);   
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@-webkit-keyframes apparition{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+   
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes apparition{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+   
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

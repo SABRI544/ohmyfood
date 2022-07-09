@@ -1,62 +1,53 @@
+@media screen and (min-width: 992px) {
+  /*  fonctionnement*/
 
+  .fonctionnement ol {
+    flex-direction: row;
+  }
 
+  /*  Restaurants*/
+  .restaurants_bloccartes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-@media screen and (min-width: 992px){
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    a {
+      width: 45%;
+    }
+  }
 
-/*  fonctionnement*/
+  /*  footer*/
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
-    .fonctionnement ol{
-        
-        flex-direction: row;
+    h2 {
+      padding-top: 5px;
     }
 
-    /*  Restaurants*/
-    .restaurants_bloccartes{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-        
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        a{
-            width: 45%;
-        }
-    
-    }
-    
-    /*  footer*/
-    footer
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    
-        h2{
-            padding-top: 5px;
-        }
-    
-        .footer_gap1, .footer_gap2{
-            padding-left: 40px;
-        }
-    
-        a{
-            padding-left: 25px;
-            text-align: center;
-        }
-       
+    .footer_gap1,
+    .footer_gap2 {
+      padding-left: 40px;
     }
 
-    .menu .bloc{
-        display: flex;
-   
+    a {
+      padding-left: 25px;
+      text-align: center;
+    }
+  }
+
+  .menu .bloc {
+    display: flex;
+
     flex-direction: row;
     justify-content: center;
-    }
-    .bloc_carte
-    {    max-width: 30%;}
-    
-    
-    
-    }
+    flex-wrap: wrap;
+  }
+  .bloc_carte {
+    max-width: 30%;
+  }
+}
