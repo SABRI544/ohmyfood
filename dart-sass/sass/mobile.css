@@ -538,8 +538,9 @@ button:hover {
   height: 100%;
   width: 100%;
   z-index: 1;
-  -webkit-animation: disparition 6s forwards;
-  animation: disparition 6s forwards;
+  -webkit-animation: disparition 4s forwards;
+  animation: disparition 4s forwards;
+  animation-delay: 2s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -576,8 +577,8 @@ button:hover {
   position: absolute;
   border-radius: 50px;
   right: -6px;
-  -webkit-animation: chargement 1s linear infinite;
-  animation: chargement 1s linear infinite;
+  -webkit-animation: chargement 3s linear infinite;
+  animation: chargement 3s linear infinite;
   background-image: linear-gradient(173deg, #FF79DA, #9356DC);
 }
 
