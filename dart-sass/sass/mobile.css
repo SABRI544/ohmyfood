@@ -273,7 +273,6 @@ header i {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   border-radius: 0px 15px 15px 0px;
   cursor: pointer;
 }
