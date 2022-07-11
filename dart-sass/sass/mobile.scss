@@ -97,27 +97,25 @@ button {
     }
 
     .num {
-        height: 25px;
-        width: 25px;
-        background-color: variables.$color-primary;
-        color: variables.$color-white;
-        position: relative;
-        right: 30px;
-  
-        font-size: 15px;
-        border-radius: 50px;
-       
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 400;
-      }
+      height: 25px;
+      width: 25px;
+      background-color: variables.$color-primary;
+      color: variables.$color-white;
+      position: relative;
+      right: 30px;
+
+      font-size: 15px;
+      border-radius: 50px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 400;
+    }
     i {
       margin-right: 30px;
       color: grey;
     }
-
-   
   }
 }
 
@@ -176,7 +174,7 @@ button {
         margin: 3px 0px 20px 10px;
       }
     }
-
+    /* coeur */
     i {
       font-size: 27px;
       text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
@@ -235,7 +233,7 @@ button {
 }
 
 .loader_spin {
-  border-radius: 50px;
+  border-radius: 40px;
 
   border: 6px solid transparent;
   height: 40px;
@@ -254,7 +252,7 @@ button {
     height: 30px;
     width: 30px;
     position: absolute;
-    border-radius: 50px;
+    border-radius: 30px;
 
     right: -6px;
     -webkit-animation: chargement 3s linear infinite;

@@ -34,6 +34,7 @@ header i {
     height: 250px;
     width: 100%;
   }
+  /* coeur */
   i {
     font-size: 27px;
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
@@ -50,7 +51,7 @@ header i {
       variables.$color-secondary,
       variables.$color-primary
     );
-    
+
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -85,7 +86,6 @@ header i {
   align-items: center;
   -webkit-animation: apparition 0.5s;
   animation: apparition 0.5s;
-  
 
   -webkit-animation-fill-mode: backwards;
 
@@ -114,16 +114,15 @@ header i {
   animation-delay: 0.4s;
 }
 .bloc_carte:nth-child(4) {
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s;
-  }
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
 
 .bloc_carte_desc {
   padding: 0px 10px 0px 10px;
   overflow: hidden;
 
   white-space: nowrap;
-  
 
   .bloc_carte_desc_soustitre {
     font-weight: 900;
@@ -155,7 +154,7 @@ header i {
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
   border-radius: 0px 15px 15px 0px;
   cursor: pointer;
 
